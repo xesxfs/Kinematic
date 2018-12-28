@@ -27,6 +27,10 @@
     {
       "name": "keyboard",
       "path": "../keyboard"
+    },
+    {
+      "name": "mouse",
+      "path": "../mouse"
     }
   ]
 }

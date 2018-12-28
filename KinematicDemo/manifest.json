@@ -7,13 +7,17 @@
 		"libs/modules/tween/tween.js",
 		"libs/modules/game/game.js",
 		"libs/modules/promise/promise.js",
-		"libs/modules/keyboard/keyboard.js"
+		"libs/modules/keyboard/keyboard.js",
+		"libs/modules/mouse/mouse.js"
 	],
 	"game": [
+		"bin-debug/App.js",
+		"bin-debug/Arrow.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
+		"bin-debug/RotateToMouse.js",
 		"bin-debug/ThemeAdapter.js"
 	]
 }
