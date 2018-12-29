@@ -147,63 +147,21 @@ var Main = (function (_super) {
             }, _this);
         });
     };
-    /**
-     * 创建场景界面
-     * Create scene interface
-     */
     Main.prototype.createGameScene = function () {
-        App.stage = this.stage;
         mouse.enable(this.stage);
-        this.addChild(new RotateToMouse());
+        // this.addChild(new RotateToMouse());
+        // this.addChild(new Bobbing());
+        // this.addChild(new Wave1());
+        // this.addChild(new Wave2());
+        // this.addChild(new Pulse());
+        // this.addChild(new Random());
+        // this.addChild(new Circle());
+        // this.addChild(new Oval());
+        // this.addChild(new MouseDistance());
+        // this.addChild(new DrawingCurves());
+        // this.addChild(new MultiCurve2());
+        this.addChild(new FollowMouse());
         new KeyBoard();
-    };
-    /**
-     * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
-     * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
-     */
-    Main.prototype.createBitmapByName = function (name) {
-        var result = new egret.Bitmap();
-        var texture = RES.getRes(name);
-        result.texture = texture;
-        return result;
-    };
-    /**
-     * 描述文件加载成功，开始播放动画
-     * Description file loading is successful, start to play the animation
-     */
-    Main.prototype.startAnimation = function (result) {
-        var _this = this;
-        var parser = new egret.HtmlTextParser();
-        var textflowArr = result.map(function (text) { return parser.parse(text); });
-        var textfield = this.textfield;
-        var count = -1;
-        var change = function () {
-            count++;
-            if (count >= textflowArr.length) {
-                count = 0;
-            }
-            var textFlow = textflowArr[count];
-            // 切换描述内容
-            // Switch to described content
-            textfield.textFlow = textFlow;
-            var tw = egret.Tween.get(textfield);
-            tw.to({ "alpha": 1 }, 200);
-            tw.wait(2000);
-            tw.to({ "alpha": 0 }, 200);
-            tw.call(change, _this);
-        };
-        change();
-    };
-    /**
-     * 点击按钮
-     * Click the button
-     */
-    Main.prototype.onButtonClick = function (e) {
-        var panel = new eui.Panel();
-        panel.title = "Title";
-        panel.horizontalCenter = 0;
-        panel.verticalCenter = 0;
-        this.addChild(panel);
     };
     return Main;
 }(eui.UILayer));
