@@ -1,6 +1,7 @@
 class Ball extends BaseSprite {
-	private radius: number;
+	public radius: number;
 	private color: number;
+
 	public constructor(radius: number = 20, color: number = 0xff0000) {
 		super();
 		this.radius = radius;

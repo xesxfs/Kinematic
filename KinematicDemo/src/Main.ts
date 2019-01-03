@@ -100,8 +100,22 @@ class Main extends eui.UILayer {
         // this.addChild(new MouseDistance());
         // this.addChild(new DrawingCurves());
         // this.addChild(new MultiCurve2());
-        this.addChild(new FollowMouse());
-        new KeyBoard();
+        // this.addChild(new FollowMouse());
+        // this.addChild(new ShipSim());
+        // this.addChild(new Bouncing());
+        // this.addChild(new Bouncing2());
+        // this.addChild(new Friction1());
+        // this.addChild(new Friction2());
+        // this.addChild(new ShipSimFriction());
+        // this.addChild(new Easing1());
+        // this.addChild(new EaseToMouse());
+        // this.addChild(new Spring1());
+        // this.addChild(new Spring2());
+        // this.addChild(new Spring3());
+        // this.addChild(new Spring4());
+        this.addChild(new Spring5());
+
+        // new KeyBoard();
     }
 
 }

@@ -28,16 +28,13 @@ var RotateToMouse = (function (_super) {
     RotateToMouse.prototype.onMouseMove = function (e) {
         this.mouseX = e.stageX;
         this.mouseY = e.stageY;
-        // console.log(this.mouseX, this.mouseY);
     };
     RotateToMouse.prototype.onEnterFrame = function (e) {
         var dx = this.mouseX - this.arrow.x;
         var dy = this.mouseY - this.arrow.y;
         var radians = Math.atan2(dy, dx);
-        // let radians = Math.atan(dy/dx);
         var rotation = radians * 180 / Math.PI;
         this.arrow.rotation = rotation;
-        //console.log(radians, rotation);
     };
     return RotateToMouse;
 }(BaseSprite));
