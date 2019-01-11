@@ -29,6 +29,10 @@
 
 class Main extends eui.UILayer {
 
+    public constructor() {
+        super();
+        console.log("Main");
+    }
 
     protected createChildren(): void {
         super.createChildren();
