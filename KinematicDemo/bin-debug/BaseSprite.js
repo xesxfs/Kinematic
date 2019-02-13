@@ -21,6 +21,10 @@ var BaseSprite = (function (_super) {
         display.x = this.stage.stageWidth / 2;
         display.y = this.stage.stageHeight / 2;
     };
+    BaseSprite.prototype.randDisplay = function (display) {
+        display.x = this.stage.stageWidth * Math.random();
+        display.y = this.stage.stageHeight * Math.random();
+    };
     return BaseSprite;
 }(egret.Sprite));
 __reflect(BaseSprite.prototype, "BaseSprite");

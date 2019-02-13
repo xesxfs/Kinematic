@@ -40,7 +40,6 @@ class Spring5 extends BaseSprite {
 		this.ball.x += this.vx;
 		this.ball.y += this.vy;
 
-
 		this.graphics.clear();
 		this.graphics.lineStyle(1);
 		this.graphics.moveTo(this.ball.x, this.ball.y);

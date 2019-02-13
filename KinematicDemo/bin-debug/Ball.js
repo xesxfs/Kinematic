@@ -14,6 +14,8 @@ var Ball = (function (_super) {
         if (radius === void 0) { radius = 20; }
         if (color === void 0) { color = 0xff0000; }
         var _this = _super.call(this) || this;
+        _this.vx = 0;
+        _this.vy = 0;
         _this.radius = radius;
         _this.color = color;
         return _this;

@@ -175,7 +175,12 @@ var Main = (function (_super) {
         // this.addChild(new Spring2());
         // this.addChild(new Spring3());
         // this.addChild(new Spring4());
-        this.addChild(new Spring5());
+        // this.addChild(new Spring5());
+        // this.addChild(new Chain());
+        // this.addChild(new MultiSpring());
+        // this.addChild(new OffsetSpring());
+        //  this.addChild(new DoubleSpring());
+        this.addChild(new Bubbles());
         // new KeyBoard();
     };
     return Main;

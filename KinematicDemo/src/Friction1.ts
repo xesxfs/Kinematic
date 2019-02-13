@@ -27,6 +27,5 @@ class Friction1 extends BaseSprite {
 		this.vy = Math.sin(angle) * speed;
 		this.ball.x += this.vx;
 		this.ball.y += this.vy;
-
 	}
 }
