@@ -121,9 +121,20 @@ class Main extends eui.UILayer {
         // this.addChild(new Chain());
         // this.addChild(new MultiSpring());
         // this.addChild(new OffsetSpring());
-        //  this.addChild(new DoubleSpring());
-        this.addChild(new Bubbles());
-
+        // this.addChild(new DoubleSpring());
+        // this.addChild(new Bubbles());
+        // this.addChild(new Bubbles2());
+        // this.addChild(new Rotate1());
+        // this.addChild(new Rotate2());
+        // this.addChild(new Rotate3());
+        // this.addChild(new AngleBounce());
+        // this.addChild(new AngleBounceRotate());
+        // this.addChild(new AngleBounceFinal());
+        // this.addChild(new MultiAngleBounce());
+        // this.addChild(new Billiard1());
+        // this.addChild(new Billiard2());
+        // this.addChild(new Billiard3());       
+        this.addChild(new MultiBilliard2());
 
         // new KeyBoard();
     }

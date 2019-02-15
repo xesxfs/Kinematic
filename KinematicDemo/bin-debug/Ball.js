@@ -16,6 +16,7 @@ var Ball = (function (_super) {
         var _this = _super.call(this) || this;
         _this.vx = 0;
         _this.vy = 0;
+        _this.mass = 1;
         _this.radius = radius;
         _this.color = color;
         return _this;

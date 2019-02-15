@@ -25,6 +25,15 @@ var BaseSprite = (function (_super) {
         display.x = this.stage.stageWidth * Math.random();
         display.y = this.stage.stageHeight * Math.random();
     };
+    BaseSprite.prototype.hitTestObject = function (obj1, obj2, targetCoordinateSpace) {
+        var rect1 = obj1.getTransformedBounds(targetCoordinateSpace);
+        var rect2 = obj2.getTransformedBounds(targetCoordinateSpace);
+        // rect1.x = obj1.x;
+        // rect1.y = obj1.y;
+        // rect2.x = obj2.x;
+        // rect2.y = obj2.y;
+        return rect1.intersects(rect2);
+    };
     return BaseSprite;
 }(egret.Sprite));
 __reflect(BaseSprite.prototype, "BaseSprite");

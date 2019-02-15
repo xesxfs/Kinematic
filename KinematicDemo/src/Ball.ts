@@ -3,6 +3,7 @@ class Ball extends BaseSprite {
 	private color: number;
 	public vx: number = 0;
 	public vy: number = 0;
+	public mass: number = 1;
 
 	public constructor(radius: number = 20, color: number = 0xff0000) {
 		super();

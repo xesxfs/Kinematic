@@ -43,6 +43,21 @@ class Bubbles2 extends BaseSprite {
 			let ball0 = this.balls[i];
 			for (let j = 1; j < this.numBalls; j++) {
 				let ball1 = this.balls[j];
+				var dx = ball1.x - ball0.x;
+				var dy = ball1.y - ball0.y;
+				var dist = Math.sqrt(dx * dx + dy * dy);
+				var minDist = ball0.radius + ball1.radius;
+				if (dist < minDist) {
+					var angle = Math.atan2(dy, dx);
+					var tx = ball0.x + Math.cos(angle) * minDist;
+					var ty = ball0.y + Math.sin(angle) * minDist;
+					var ax = (tx - ball1.x) * this.spring;
+					var ay = (ty - ball1.y) * this.spring;
+					ball0.vx -= ax;
+					ball0.vy -= ay;
+					ball1.vx += ax;
+					ball1.vy += ay;
+				}
 			}
 		}
 		for (let i = 0; i < this.numBalls; i++) {
@@ -53,7 +68,7 @@ class Bubbles2 extends BaseSprite {
 	}
 
 	private move(ball: Ball) {
-		ball.vy += this.gravity;
+		// ball.vy += this.gravity;
 		ball.x += ball.vx;
 		ball.y += ball.vy;
 
