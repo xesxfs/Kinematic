@@ -146,7 +146,14 @@ class Main extends eui.UILayer {
         // this.addChild(new Walking2());
         // this.addChild(new Walking3());
         // this.addChild(new Walking4());
-        this.addChild(new RealWalk());
+        // this.addChild(new RealWalk());
+        // this.addChild(new Perspective1());
+        // this.addChild(new Velocity3D());
+        // this.addChild(new Bounce3D());
+        // this.addChild(new MultiBounce3D());
+        // this.addChild(new Fireworks());
+        this.addChild(new Trees());
+
 
         // new KeyBoard();
     }
