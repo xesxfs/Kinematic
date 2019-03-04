@@ -8,11 +8,11 @@ var __extends = this && this.__extends || function __extends(t, e) {
 for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
 r.prototype = e.prototype, t.prototype = new r();
 };
-var Lines3D2 = (function (_super) {
-    __extends(Lines3D2, _super);
-    function Lines3D2() {
+var Square3D = (function (_super) {
+    __extends(Square3D, _super);
+    function Square3D() {
         var _this = _super.call(this) || this;
-        _this.numPoints = 50;
+        _this.numPoints = 4;
         _this.easing = .1;
         _this.fl = 250;
         _this.vpX = 0;
@@ -21,24 +21,27 @@ var Lines3D2 = (function (_super) {
         _this.mouseY = 0;
         return _this;
     }
-    Lines3D2.prototype.init = function () {
+    Square3D.prototype.init = function () {
         this.vpX = this.stage.stageWidth / 2;
         this.vpY = this.stage.stageHeight / 2;
         mouse.setMouseMoveEnabled(true);
         this.stage.addEventListener(mouse.MouseEvent.MOUSE_MOVE, this.onMouseMove, this);
         this.points = [];
+        this.points[0] = new Point3D(-100, -100, 100);
+        this.points[1] = new Point3D(100, -100, 100);
+        this.points[2] = new Point3D(100, 100, 100);
+        this.points[3] = new Point3D(-100, 100, 100);
         for (var i = 0; i < this.numPoints; i++) {
-            var point = new Point3D(Math.random() * 200 - 100, Math.random() * 200 - 100, Math.random() * 200 - 100);
+            var point = this.points[i];
             point.setVanishingPoint(this.vpX, this.vpY);
-            this.points.push(point);
         }
         this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
     };
-    Lines3D2.prototype.onMouseMove = function (e) {
+    Square3D.prototype.onMouseMove = function (e) {
         this.mouseX = e.stageX;
         this.mouseY = e.stageY;
     };
-    Lines3D2.prototype.onEnterFrame = function () {
+    Square3D.prototype.onEnterFrame = function () {
         var angleY = (this.mouseX - this.vpX) * .001;
         var angleX = (this.mouseY - this.vpY) * .001;
         for (var i = 0; i < this.numPoints; i++) {
@@ -52,8 +55,9 @@ var Lines3D2 = (function (_super) {
         for (var i_1 = 1; i_1 < this.numPoints; i_1++) {
             this.graphics.lineTo(this.points[i_1].screenX, this.points[i_1].screenY);
         }
+        this.graphics.lineTo(this.points[0].screenX, this.points[0].screenY);
     };
-    return Lines3D2;
+    return Square3D;
 }(BaseSprite));
-__reflect(Lines3D2.prototype, "Lines3D2");
-//# sourceMappingURL=Lines3D2.js.map
+__reflect(Square3D.prototype, "Square3D");
+//# sourceMappingURL=Square3D.js.map

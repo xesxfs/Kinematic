@@ -1,6 +1,6 @@
-class Lines3D2 extends BaseSprite {
+class SpinningE extends BaseSprite {
 	private points: Array<Point3D>;
-	private numPoints: number = 50;
+	private numPoints: number = 12;
 	private easing: number = .1;
 	private fl: number = 250;
 	private vpX: number = 0;
@@ -17,11 +17,24 @@ class Lines3D2 extends BaseSprite {
 		mouse.setMouseMoveEnabled(true);
 		this.stage.addEventListener(mouse.MouseEvent.MOUSE_MOVE, this.onMouseMove, this);
 		this.points = [];
-		for (let i = 0; i < this.numPoints; i++) {
-			var point = new Point3D(Math.random() * 200 - 100, Math.random() * 200 - 100, Math.random() * 200 - 100);
-			point.setVanishingPoint(this.vpX, this.vpY);
-			this.points.push(point);
 
+		this.points[0] = new Point3D(-150, -250, 100);
+		this.points[1] = new Point3D(150, -250, 100);
+		this.points[2] = new Point3D(150, -150, 100);
+		this.points[3] = new Point3D(-50, -150, 100);
+		this.points[4] = new Point3D(-50, -50, 100);
+		this.points[5] = new Point3D(50, -50, 100);
+		this.points[6] = new Point3D(50, 50, 100);
+		this.points[7] = new Point3D(-50, 50, 100);
+		this.points[8] = new Point3D(-50, 150, 100);
+		this.points[9] = new Point3D(150, 150, 100);
+		this.points[10] = new Point3D(150, 250, 100);
+		this.points[11] = new Point3D(-150, 250, 100);
+
+		for (let i = 0; i < this.numPoints; i++) {
+			var point = this.points[i];
+			point.setVanishingPoint(this.vpX, this.vpY);
+			point.setCenter(0, 100, 200);
 		}
 		this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
 	}
@@ -41,10 +54,13 @@ class Lines3D2 extends BaseSprite {
 		}
 		this.graphics.clear();
 		this.graphics.lineStyle(1);
+		this.graphics.beginFill(0xffcccc);
 		this.graphics.moveTo(this.points[0].screenX, this.points[0].screenY);
 		for (let i = 1; i < this.numPoints; i++) {
 			this.graphics.lineTo(this.points[i].screenX, this.points[i].screenY);
 		}
+		this.graphics.lineTo(this.points[0].screenX, this.points[0].screenY);
+		this.graphics.endFill();
 	}
 
 

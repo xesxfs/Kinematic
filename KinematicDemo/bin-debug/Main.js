@@ -214,8 +214,12 @@ var Main = (function (_super) {
         // this.addChild(new Easing3D());
         // this.addChild(new RotateY());
         // this.addChild(new RotateXY());
-        this.addChild(new Lines3D1());
+        // this.addChild(new Lines3D1());
         // this.addChild(new Lines3D2());
+        // this.addChild(new Square3D());
+        // this.addChild(new SpinningE());
+        // this.addChild(new Triangles());
+        this.addChild(new Cube());
         // new KeyBoard();
     };
     return Main;
