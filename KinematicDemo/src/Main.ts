@@ -134,7 +134,7 @@ class Main extends eui.UILayer {
         // this.addChild(new Billiard1());
         // this.addChild(new Billiard2());
         // this.addChild(new Billiard3());       
-        // this.addChild(new MultiBilliard2());
+        this.addChild(new MultiBilliard2());
         // this.addChild(new Gravity());
         // this.addChild(new GravityBounce());
         // this.addChild(new GravityRandom());
@@ -161,7 +161,7 @@ class Main extends eui.UILayer {
         // this.addChild(new Square3D());
         // this.addChild(new SpinningE());
         // this.addChild(new Triangles());
-        this.addChild(new Cube());
+        // this.addChild(new Cube());
 
 
         // new KeyBoard();

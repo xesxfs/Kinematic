@@ -2,6 +2,7 @@ class MultiBilliard2 extends BaseSprite {
 	private balls: Array<Ball>;
 	private numBalls: number = 20;
 	private bounce: number = -1;
+	private friction: number = 0.6;
 	public constructor() {
 		super()
 	}
@@ -10,7 +11,8 @@ class MultiBilliard2 extends BaseSprite {
 	public init() {
 		this.balls = new Array();
 		for (let i = 0; i < this.numBalls; i++) {
-			let radius = Math.random() * 50 + 20;
+			let radius = 20;
+			// let radius = Math.random() * 50 + 20;
 			var ball: Ball = new Ball(radius);
 			ball.mass = radius;
 			this.randDisplay(ball);
@@ -26,6 +28,8 @@ class MultiBilliard2 extends BaseSprite {
 	public onEnterFrame() {
 		for (let i = 0; i < this.numBalls; i++) {
 			var ball: Ball = this.balls[i];
+			ball.vx *= this.friction;
+			ball.vy * this.friction;
 			ball.x += ball.vx;
 			ball.y += ball.vy;
 			this.checkWalls(ball);
@@ -38,6 +42,8 @@ class MultiBilliard2 extends BaseSprite {
 				this.checkCollision(ballA, ballB);
 			}
 		}
+
+
 
 	}
 

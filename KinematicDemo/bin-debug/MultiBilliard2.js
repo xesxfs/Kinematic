@@ -14,12 +14,14 @@ var MultiBilliard2 = (function (_super) {
         var _this = _super.call(this) || this;
         _this.numBalls = 20;
         _this.bounce = -1;
+        _this.friction = 0.6;
         return _this;
     }
     MultiBilliard2.prototype.init = function () {
         this.balls = new Array();
         for (var i = 0; i < this.numBalls; i++) {
-            var radius = Math.random() * 50 + 20;
+            var radius = 20;
+            // let radius = Math.random() * 50 + 20;
             var ball = new Ball(radius);
             ball.mass = radius;
             this.randDisplay(ball);
@@ -33,6 +35,8 @@ var MultiBilliard2 = (function (_super) {
     MultiBilliard2.prototype.onEnterFrame = function () {
         for (var i = 0; i < this.numBalls; i++) {
             var ball = this.balls[i];
+            ball.vx *= this.friction;
+            ball.vy * this.friction;
             ball.x += ball.vx;
             ball.y += ball.vy;
             this.checkWalls(ball);
