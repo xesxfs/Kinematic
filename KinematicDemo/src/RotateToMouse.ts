@@ -12,7 +12,7 @@ class RotateToMouse extends BaseSprite {
 		this.addChild(this.arrow);
 		this.arrow.x = this.stage.stageWidth / 2;
 		this.arrow.y = this.stage.stageHeight / 2;
-		this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
+		// this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
 	}
 
 	private onMouseMove(e: egret.TouchEvent) {

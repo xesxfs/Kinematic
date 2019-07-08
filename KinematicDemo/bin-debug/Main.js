@@ -151,7 +151,7 @@ var Main = (function (_super) {
     };
     Main.prototype.createGameScene = function () {
         mouse.enable(this.stage);
-        // this.addChild(new RotateToMouse());
+        this.addChild(new RotateToMouse());
         // this.addChild(new Bobbing());
         // this.addChild(new Wave1());
         // this.addChild(new Wave2());
@@ -192,7 +192,7 @@ var Main = (function (_super) {
         // this.addChild(new Billiard1());
         // this.addChild(new Billiard2());
         // this.addChild(new Billiard3());       
-        this.addChild(new MultiBilliard2());
+        // this.addChild(new MultiBilliard2());
         // this.addChild(new Gravity());
         // this.addChild(new GravityBounce());
         // this.addChild(new GravityRandom());

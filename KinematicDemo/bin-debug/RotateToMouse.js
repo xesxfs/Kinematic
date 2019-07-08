@@ -23,7 +23,7 @@ var RotateToMouse = (function (_super) {
         this.addChild(this.arrow);
         this.arrow.x = this.stage.stageWidth / 2;
         this.arrow.y = this.stage.stageHeight / 2;
-        this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
+        // this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
     };
     RotateToMouse.prototype.onMouseMove = function (e) {
         this.mouseX = e.stageX;

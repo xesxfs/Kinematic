@@ -93,7 +93,7 @@ class Main extends eui.UILayer {
 
     protected createGameScene(): void {
         mouse.enable(this.stage);
-        // this.addChild(new RotateToMouse());
+        this.addChild(new RotateToMouse());
         // this.addChild(new Bobbing());
         // this.addChild(new Wave1());
         // this.addChild(new Wave2());
@@ -134,7 +134,7 @@ class Main extends eui.UILayer {
         // this.addChild(new Billiard1());
         // this.addChild(new Billiard2());
         // this.addChild(new Billiard3());       
-        this.addChild(new MultiBilliard2());
+        // this.addChild(new MultiBilliard2());
         // this.addChild(new Gravity());
         // this.addChild(new GravityBounce());
         // this.addChild(new GravityRandom());
