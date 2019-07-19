@@ -1,4 +1,4 @@
-class Point3D {
+class Point3D1 {
 	public x: number;
 	public y: number;
 	public z: number;
