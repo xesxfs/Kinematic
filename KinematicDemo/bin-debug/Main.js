@@ -219,8 +219,10 @@ var Main = (function (_super) {
         // this.addChild(new Lines3D2());
         // this.addChild(new Square3D());
         // this.addChild(new SpinningE());
-        this.addChild(new Triangles());
+        // this.addChild(new Triangles());
         // this.addChild(new Cube());
+        // this.addChild(new VehicleTest());
+        this.addChild(new SeekTest());
         // new KeyBoard();
     };
     return Main;

@@ -10,11 +10,11 @@
 		"libs/modules/mouse/mouse.js"
 	],
 	"game": [
-		"bin-debug/等角投影/IsoObject.js",
 		"bin-debug/BaseSprite.js",
+		"bin-debug/等角投影/IsoObject.js",
 		"bin-debug/等角投影/DrawnIsoTile.js",
-		"bin-debug/Pulse.js",
-		"bin-debug/Arrow.js",
+		"bin-debug/转向行为/Vehicle.js",
+		"bin-debug/Rotate1.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/Ball.js",
 		"bin-debug/Ball3D.js",
@@ -59,10 +59,10 @@
 		"bin-debug/Perspective1.js",
 		"bin-debug/Platform.js",
 		"bin-debug/Point3D .js",
-		"bin-debug/AngleBounceFinal.js",
+		"bin-debug/Pulse.js",
 		"bin-debug/Random.js",
 		"bin-debug/RealWalk.js",
-		"bin-debug/Rotate1.js",
+		"bin-debug/AngleBounceFinal.js",
 		"bin-debug/Rotate2.js",
 		"bin-debug/Rotate3.js",
 		"bin-debug/RotateToMouse.js",
@@ -108,6 +108,11 @@
 		"bin-debug/等角投影/MotionTest.js",
 		"bin-debug/等角投影/Point3D.js",
 		"bin-debug/等角投影/TileTest.js",
-		"bin-debug/等角投影/WorldTest.js"
+		"bin-debug/等角投影/WorldTest.js",
+		"bin-debug/转向行为/SeekTest.js",
+		"bin-debug/转向行为/SteeredVehicle.js",
+		"bin-debug/转向行为/Vector2D.js",
+		"bin-debug/Arrow.js",
+		"bin-debug/转向行为/VehicleTest.js"
 	]
 }
