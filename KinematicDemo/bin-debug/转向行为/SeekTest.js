@@ -15,10 +15,11 @@ var SeekTest = (function (_super) {
         _this.mouseX = 0;
         _this.mouseY = 0;
         _this._vehicle = new SteeredVehicle();
-        _this.addChild(_this._vehicle);
         return _this;
     }
     SeekTest.prototype.init = function () {
+        // this._vehicle.position = new Vector2D(100, 100);
+        this.addChild(this._vehicle);
         mouse.setMouseMoveEnabled(true);
         this.stage.addEventListener(mouse.MouseEvent.MOUSE_MOVE, this.onMouseMove, this);
         this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);

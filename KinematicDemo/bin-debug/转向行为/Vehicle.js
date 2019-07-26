@@ -12,7 +12,7 @@ var Vehicle = (function (_super) {
     __extends(Vehicle, _super);
     function Vehicle() {
         var _this = _super.call(this) || this;
-        _this._edgeBehavior = Vehicle.WRAP;
+        _this._edgeBehavior = Vehicle.BOUNCE;
         _this._mass = 1.0;
         _this._maxSpeed = 10;
         _this._position = new Vector2D();

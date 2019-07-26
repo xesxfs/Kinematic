@@ -88,11 +88,11 @@ var Vector2D = (function () {
      * @return Vector2D A reference to this vector.
      * */
     Vector2D.prototype.normalize = function () {
-        if (length == 0) {
+        if (this.length == 0) {
             this._x = 1;
             return this;
         }
-        var len = length;
+        var len = this.length;
         this._x /= len;
         this._y /= len;
         return this;
@@ -103,7 +103,7 @@ var Vector2D = (function () {
      ** @return Vector2D A reference to this vector.
      **/
     Vector2D.prototype.truncate = function (max) {
-        length = Math.min(max, length);
+        this.length = Math.min(max, this.length);
         return this;
     };
     /**
@@ -120,7 +120,7 @@ var Vector2D = (function () {
      * @return Boolean True if length is one, otherwise false.
      **/
     Vector2D.prototype.isNormalized = function () {
-        return length == 1.0;
+        return this.length == 1.0;
     };
     /**
      * * 计算这个向量和另一个给定向量的点积.

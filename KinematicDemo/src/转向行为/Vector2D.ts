@@ -88,11 +88,11 @@ class Vector2D {
 	 * @return Vector2D A reference to this vector.          
 	 * */
 	public normalize(): Vector2D {
-		if (length == 0) {
+		if (this.length == 0) {
 			this._x = 1;
 			return this;
 		}
-		var len: number = length;
+		var len: number = this.length;
 		this._x /= len;
 		this._y /= len;
 		return this;
@@ -104,7 +104,7 @@ class Vector2D {
 	 ** @return Vector2D A reference to this vector.          
 	 **/
 	public truncate(max: number): Vector2D {
-		length = Math.min(max, length);
+		this.length = Math.min(max, this.length);
 		return this;
 	}
 
@@ -125,7 +125,7 @@ class Vector2D {
 	 * @return Boolean True if length is one, otherwise false.          
 	 **/
 	public isNormalized(): boolean {
-		return length == 1.0;
+		return this.length == 1.0;
 	}
 
 

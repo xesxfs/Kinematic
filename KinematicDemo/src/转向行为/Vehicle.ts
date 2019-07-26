@@ -1,6 +1,6 @@
 class Vehicle extends BaseSprite {
 
-	protected _edgeBehavior: string = Vehicle.WRAP;
+	protected _edgeBehavior: string = Vehicle.BOUNCE;
 	protected _mass: number = 1.0;
 	protected _maxSpeed: number = 10;
 	protected _position: Vector2D;
