@@ -164,8 +164,8 @@ class Main extends eui.UILayer {
         // this.addChild(new Triangles());
         // this.addChild(new Cube());
 
-        // this.addChild(new VehicleTest());
-        this.addChild(new SeekTest());        
+        this.addChild(new VehicleTest());
+        // this.addChild(new SeekTest());        
 
         // new KeyBoard();
     }
